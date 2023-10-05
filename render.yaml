@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: strapi
+    name: dentist-strapi
     env: node
     plan: free
     buildCommand: npm install && npm run build
@@ -20,7 +20,7 @@ services:
         sync: false
       - key: DATABASE_URL
         fromDatabase:
-          name: strapi
+          name: dentist-strapi
           property: connectionString
       - key: JWT_SECRET
         generateValue: true
